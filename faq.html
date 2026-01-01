@@ -228,6 +228,17 @@ async function deleteFAQ(question) {
 
   loadFAQs();
 }
+    const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+const navClose = document.getElementById("navClose");
+
+navToggle.onclick = () => navMenu.classList.add("open");
+navClose.onclick = () => navMenu.classList.remove("open");
+
+// close menu on any click inside
+navMenu.querySelectorAll("a").forEach(el=>{
+  el.onclick = ()=> navMenu.classList.remove("open");
+});
 
 </script>
 </body>
